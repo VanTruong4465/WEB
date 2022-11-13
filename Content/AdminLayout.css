@@ -1,0 +1,114 @@
+﻿body {
+}
+/**/
+
+/*Navbar*/
+.HeaderListBar {
+    background-color: white;
+    width: 250px;
+    position: absolute;
+    left: -250px;
+    transition: all 1.5s;
+}
+
+.HeaderListBarShow {
+    left: 0px;
+    transition: all .3s;
+}
+
+.OpenList {
+    display: contents;
+}
+
+    .OpenList:hover {
+        color: #3f6ad8;
+        transition: all .2s;
+        cursor: pointer;
+    }
+
+.Show {
+    display: block;
+}
+
+.Hide {
+    display: contents;
+}
+
+.CloseList {
+    position: relative;
+    left: 180px;
+    transition: all 0.8s;
+    background-color: white;
+}
+
+    .CloseList:hover {
+        color: #ce2323;
+        transition: all .2s;
+        cursor: pointer;
+    }
+/*SideBar*/
+.SideBar {
+    z-index: 100;
+    height: 100%;
+    padding-left: 10px;
+    padding-right: 20px;
+    margin-right: 50px;
+    max-width: 250px;
+    width: 250px;
+    position: absolute;
+    left: -250px;
+    background-color: white;
+    transition: all 0.3s;
+    box-shadow: 5px 0 5px -5px #333;
+}
+
+.SideBarShow {
+    max-width: 250px;
+    left: 0px;
+    transition: all .3s;
+}
+
+.SideBar .Title {
+    color: #3f6ad8;
+    overflow: hidden;
+}
+
+.SideBar .Option ol, ul {
+    padding-left: 0.5rem;
+}
+
+.SideBar .Option .Node {
+    font-weight: 500;
+    width: 100%;
+    list-style: none;
+    padding: 4px 0px 4px 10px;
+}
+
+    .SideBar .Option .Node .Negative {
+        text-decoration: none;
+        color: black;
+    }
+
+    .SideBar .Option .Node:hover {
+        color: #3f6ad8;
+        border-radius: 5px;
+        background-color: #e0f3ff;
+        cursor: pointer;
+        font-weight: 500;
+        transition: all .2s;
+    }
+/*Body*/
+.ScrollBody {
+    max-height: 700px;
+    min-height: 700px;
+    overflow: scroll;
+}
+/*Footer*/
+.footer {
+    box-shadow: 2px 2px 10px 2px #6c757d;
+}
+/*Button*/
+.btn-signOut:hover {
+    background-color: #3f6ad8;
+    transition: all 0.5s;
+}

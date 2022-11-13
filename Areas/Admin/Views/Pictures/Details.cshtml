@@ -1,0 +1,41 @@
+﻿@model Bonsal_Gardent.Areas.Admin.Data.Picture
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Picture</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Product.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Product.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Path)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Path)
+        </dd>
+
+        <dt>
+            @{string[] Path = @Html.DisplayFor(model => model.Path).ToString().Split(',');}
+            @foreach (var image in Path)
+            {
+                <img src="~/Images/UploadedFiles/@image" class="w-25 h-25 shadow-sm" />
+            }
+        </dt>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID },new {@class="btn btn-primary"}) 
+    @Html.ActionLink("Back to List", "Index", null, new {@class="btn btn-dark"})
+</p>

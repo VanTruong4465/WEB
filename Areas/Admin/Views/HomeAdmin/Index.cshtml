@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    @if (Session["Email"] != null)
+    {
+        Response.Redirect("/Admin/OrderDetails/Index");
+    }
+    <div>
+
+    </div>
+</body>
+</html>

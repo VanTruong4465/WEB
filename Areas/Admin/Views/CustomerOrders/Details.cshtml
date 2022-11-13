@@ -1,0 +1,35 @@
+﻿@model Bonsal_Gardent.Areas.Admin.Data.CustomerOrder
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CustomerOrder</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CreateAtTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreateAtTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AccCustomer.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AccCustomer.Name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

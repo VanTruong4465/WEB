@@ -1,0 +1,27 @@
+﻿@model Bonsal_Gardent.Areas.Admin.Data.Categogy
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Details Categogy</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+    </dl>
+</div>
+<hr />
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID },new {@class="btn btn-primary"}) |
+    @Html.ActionLink("Back to List", "Index",null, new { @class = "btn btn-dark" })
+</p>

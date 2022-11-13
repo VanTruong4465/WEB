@@ -1,0 +1,64 @@
+﻿@model IEnumerable<Bonsal_Gardent.Areas.Admin.Data.OrderDetail>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Order List</h2>
+
+<p>
+    @*@Html.ActionLink("Create New", "Create",null, new {@class="btn btn-success"})*@
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CustomerOrder.ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Product.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Quantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Amount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CustomerOrder.ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Product.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Quantity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Amount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StatusOrder.Name)
+        </td>
+        <td>
+            @Html.ActionLink("Submit", "Edit", new { id = item.ID }, new { @class = "btn btn-primary m-1 w-50" })
+            @*@Html.ActionLink("Details", "Details", new { id = item.ID }, new { @class = "btn btn-success m-1 w-50" })
+            @Html.ActionLink("Delete", "Delete", new { id = item.ID }, new { @class = "btn btn-danger m-1 w-50" })*@
+        </td>
+    </tr>
+}
+
+</table>

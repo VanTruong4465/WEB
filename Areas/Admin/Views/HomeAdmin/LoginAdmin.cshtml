@@ -1,0 +1,61 @@
+﻿@{
+    Layout = null;
+
+
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AdminLogin</title>
+    <link href="~/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/Admin/LoginAdmin.css" rel="stylesheet" />
+    <link href="~/Content/Admin/Main.css" rel="stylesheet" />
+
+</head>
+<body>
+    @{Session["Email"] = null;}
+    @{Session["Type"] = null;}
+    @{Session["Name"] = null;}
+    <div class="container login">
+        <div id="first">
+            <div class="myform form ">
+                <div class="logo mb-3">
+                    <div class="col-md-12 text-center">
+                        <img src="~/Images/Logo/icon-leef.jpg" width="40" />
+                        <h1 class="p-2">Bonsal Gardent </h1>
+                    </div>
+                </div>
+                <form action="Logining" method="post" name="login">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1" class="lblTitle TitleAdmin">Email address</label>
+                        <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1" class="lblTitle TitleAdmin">Password</label>
+                        <input type="password" name="password" id="password" class="form-control" aria-describedby="emailHelp" placeholder="Enter Password">
+                    </div>
+                    <hr />
+                    <div class="col-md-12 text-center ">
+                        <button type="submit" class=" btn btn-block mybtn btn-dark tx-tfm">Login</button>
+                    </div>
+                    <div class="form-group p-3">
+                        <p class="text-center">Don't have account please contact the administrator!</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    @if (ViewBag.Notice != null)
+    {
+        <text>
+            <script>
+                let message = ViewBag.Notice + '';
+                alert(message);
+            </script>
+        </text>
+    }
+    <script src="~/Scripts/LoginAdmin.js" type="text/javascript"></script>
+</body>
+</html>
